@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <section id="home" class="calculator_home">
+    <div class="main_container">
+      <div class="main_flex">
+        <div class="title mg_1">
+          <img src="./images/logo.svg" alt="oops" class="logo">
+        </div>
+        <div class="calculator mg_1">
+
+          <div class="formalbox_calculation  formalbox">
+            <form  class="panel_1 mg_2">
+              <div class="bill pd_3">
+                <div>
+                  <label for="name" class="in_title">Bill</label>
+                  <p class="message"></p>
+                </div>
+                <div>
+                  <span class="icon_dollar"><img src="./images/icon-dollar.svg" alt="oops"></span>
+                  <input type="number"  class="bill_sharing0" placeholder="0" value="">
+                </div>
+              </div>
+              <div class="select mg_3">
+                <div>
+                  <label for="select" class="in_title">Select Tip %</label>
+                  <p class="message"></p>
+                </div>
+                <div>
+                  <div class="select_tip">
+                    <div class="rows main_grid">
+
+                      <div><input type="button" value="5%" class="rate_hike general_hike pdr_btn" ></div>
+                      <div><input type="button" value="10%" class="rate_hike general_hike" ></div>
+                      <div><input type="button" value="15%" class="rate_hike main_rate general_hike"></div> 
+                      <div><input type="button" value="25%" class="rate_hike general_hike"></div>
+                      <div><input type="button" value="50%" class="rate_hike general_hike"></div>
+                      <div><input type="number" class="rate_hikenum general_hike" value= "" placeholder="Custom"></div>
+                    </div> 
+                  </div>
+
+                </div>
+              </div>
+              
+              <div class="people_bill">
+                <div>
+                  <label for="select" class="in_title">Number of People</label>
+                  <p class="message"></p>
+                </div>
+                
+                <div>
+                  <span class="icon_people"><img src="./images/icon-person.svg" alt="oops"></span>
+                  <input type="number"  class="bill_sharing1" placeholder="0" >
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="formalbox_result bg_bluedark formalbox">
+            <form class="panel_2 mg_2">
+              <div class="tip_amount pd_4">
+                <div class="label_1">
+                  <h4 class="result_title">Tip Amount</h4>
+                  <p class="person">/ person</p>
+                </div>
+                <input type="text" class="amount_result1 amt" value="$0.00" disabled>
+              </div>
+              <div class="total_amount pd_5">
+                <div class="label_1">
+                  <h4 class="result_title">Total</h4>
+                  <p class="person">/ person</p>
+                </div>
+                <input type="text" class="amount_result2 amt" value="$0.00" disabled>
+              </div>
+              <div class="set_back pd_6">
+                <input type="button" value="RESET" class="reset_btn" disabled>
+              </div>
+            </form>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+  
+  <footer class="foot">
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Be in Rain 06</a>.
+    </div>
+  </footer>
+
+ 
+  <script src="./javascript/scripts.js"></script>
+</body>
+</html>
