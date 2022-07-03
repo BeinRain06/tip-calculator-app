@@ -39,17 +39,16 @@ let coordSelectip ={
 function setMessage1(msg, color){
   message1.textContent= msg;
   message1.style.color= color;
-  message1.style.fontSize='30px';
 }
+
 function setMessage2(msg, color){
   message2.textContent= msg;
   message2.style.color= color;
-  message1.style.fontSize='30px';
 }
+
 function setMessage3(msg, color){
   message3.textContent= msg;
   message3.style.color= color;
-  message1.style.fontSize='30px';
 }
 
 function removeMessage(){
@@ -147,7 +146,7 @@ function activeSelectTipChoosed(e){
   }
 }
 
-// input peopme focused retrieve the value of select tip percent
+// input people focused retrieve the value of select tip percent
 
 inputNumberSharing.addEventListener('keyup', retrieveLatestSelectTipValue);
 
@@ -212,12 +211,10 @@ function keepSelectTipPercentActived(e){
     setTimeout(setMessage1("Can't be negative", 'red'), 1000);
     setTimeout(removeMessage, 3000);
     e.target.disabled=true;
-    setTimeout(enabledForAFewTime(e), 3000);
   }else if(inputNumberBill.value ===''){
     setTimeout(setMessage1("Can't be 0", 'red'), 1000);
     setTimeout(removeMessage, 3000);
     e.target.disabled=true;
-    setTimeout(enabledForAFewTime(e), 3000);
   }else if(parseFloat(inputNumberBill.value) > 0 ){
     let m1;
     m1= coordSelectip.tipPosition;
