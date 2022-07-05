@@ -821,9 +821,13 @@ input.rate_hikenum{
   }
 
   .formalbox_calculation .people_bill{
+    width: 80vw;
+  }
+
+  .formalbox_calculation .people_bill{
     position: relative;
     top: -4.5em;
-    width: 100vw;
+    width: 80vw;
   }
 
   .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
@@ -886,12 +890,22 @@ input.rate_hikenum{
   }
  
   .in_title{
-    font-size: 14px;
+    font-size: 12px;
     padding-bottom: 0.8rem;
   }
 
   .formalbox_calculation .select_tip .main_grid{
     top: -0.8em;
+  }
+
+  .formalbox_calculation .people_bill{
+    width: 75vw;
+  }
+
+  .formalbox_calculation .people_bill{
+    position: relative;
+    top: -4.5em;
+    width: 75vw;
   }
 
   
