@@ -895,9 +895,6 @@ input.rate_hikenum{
   }
 
   
-  /* .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
-    height: 1em;
-  } */
 
   .bill div span , .people_bill div span{
     width: 1.2em;
@@ -905,23 +902,7 @@ input.rate_hikenum{
     margin: 0 auto;
   }
 
-  /* .formalbox_result{
-    display: flex;
-    max-height: 58vh;
-  } */
-
-  /* .rate_hike{
-    width: 24vw;
-    padding: 0.3em 0.8em;
-    font-size: 15px;
-    
-  }
-  
-  input.rate_hikenum{
-    width: 24vw;
-    padding: 1.6em 0.5em; 
-    font-size: 15px;
-  } */
+ 
 
   .rate_hike{
     width: 28vw;
@@ -934,10 +915,6 @@ input.rate_hikenum{
     padding: 2.3em 0.5em; 
   }
 
-  /* .formalbox_result{
-    max-height: 50vh;
-    justify-content: flex-start;
-  } */
 
   .mg_2{
     margin: 0 1em;
@@ -957,16 +934,6 @@ input.rate_hikenum{
     font-size: 1.2em;
   }
 
-  /* .formalbox_result .tip_amount{
-    justify-content: space-around;
-    margin-right: 0.9em;
-    
-  }
-  .formalbox_result .total_amount{
-    justify-content: space-around;
-    margin-right: 0.7em;
-    
-  } */
 
   .formalbox_result  .set_back .reset_btn {
     padding: 0.3em 0;
@@ -974,6 +941,12 @@ input.rate_hikenum{
     font-size: 15px;
     border-radius: 16px; 
   }
+
+  .formalbox_result  .set_back  {
+    position: relative;
+    top: -2.7em;
+  }
+
   .attribution { font-size: 8px; text-align: center; }
   .foot {padding-bottom: 0.4rem;}
 }
