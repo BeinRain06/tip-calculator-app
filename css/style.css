@@ -5,6 +5,7 @@
 
 :root{
   --main-color: hsl(172, 67%, 45%);
+  --main-color1: hsl(172, 33%, 63%);
   --secondary-color: hsl(183, 100%, 15%);
   --custom-input-background: hsl(185, 41%, 84%) ;
   --laying-input-background: hsl(189, 41%, 97%) ;
@@ -24,7 +25,7 @@
 
 body{
   font-family: 'Space Mono', monospace;
-  background: var(--main-color);
+  background: var(--main-color1);
 }
 
 
@@ -73,7 +74,7 @@ label{
   padding: 4em 0;
 }
 .mg_2{
-  margin: 0.4em;
+  margin: 0.4rem 0.8em;
 }
 .mg_3{
   margin-top: 0.5em; 
@@ -86,7 +87,7 @@ label{
   text-align: right;
 }
 .pd_4{
-  padding: 2em 0 1em;
+  padding: 2.7em 0 1em;
   margin: 1.6em 1em 0 0;
 }
 .pd_5{
@@ -137,6 +138,7 @@ label{
 #home .title img{
   width: 10em;
   height: 4em; 
+  transform: scale(0.75);
 }
 
 /* area calculator */
@@ -145,7 +147,7 @@ label{
   position: relative;
   top: -2.5rem;
   width: 74vw;
-  height: 90vh;
+  height: 62vh;
   padding: 1.2em ;
   display: flex;
   flex-direction: row;
@@ -161,6 +163,7 @@ label{
   flex-basis: 50%;
   margin-right: 1.6rem;
   overflow: hidden;
+  max-height: 27em;
 }
 
 
@@ -209,9 +212,11 @@ label{
   display: flex;
   flex-basis: 85%;
   height: 40px;
-  width: 15vw;
+  width: 12vw;
   justify-content: flex-end;
   background: var(--laying-input-background);
+  border: none;
+  outline: none;
 }
 
 /* logo input formalbox calculation */
@@ -229,6 +234,7 @@ label{
   width: 30px;
   height: 30px;
   margin-right: 2px;
+  transform: scale(0.75);
 }
 
 .formalbox_calculation .select_tip .main_grid{
@@ -274,8 +280,8 @@ label{
 .rate_hike{
   text-decoration: none;
   border: none;
-  width: 5.2em;
-  padding: 0.7em 0.8em;
+  width: 6em;
+  padding: 0.9em 0.8em;
   margin: 7px;
   color: var(--white);
   cursor: pointer;
@@ -286,10 +292,10 @@ label{
 input.rate_hikenum{
   
   background-color: var(--custom-input-background);
-  padding: 0.5em 0.5em;
+  padding: 0.7em 0.5em;
   margin: 7px;
   font-size: 1.56em;
-  width: 5.2em;
+  width: 5.6em;
   border-radius: 10px;
  
 }
@@ -316,7 +322,8 @@ input.rate_hikenum{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-basis: 100%;  
+  flex-basis: 100%;
+  margin: 0 0.6em;  
 }
 
 
@@ -327,7 +334,7 @@ input.rate_hikenum{
 
 .result_title{
   color: var(--white);
-  font-size: 1.56em;
+  font-size: 1.4em;
 }
 .person{
   color: var(--color-span-person);
@@ -355,7 +362,7 @@ input.rate_hikenum{
   color: var(--secondary-color);
   cursor: pointer;
   background-color: var(--color-span-person);
-  margin: 4.3em 1em 0;
+  margin: 6em 1em 0;
 }
 
 
@@ -374,30 +381,71 @@ input.rate_hikenum{
 
 @media(max-width:1300px){
   .rate_hike{
-    width: 8vw;
+    width: 4.7em;
   }
   input.rate_hikenum{
-    width: 8vw;
+    width: 6.3em;
+    font-size: 1.1em;
+    padding: 1.3em 0.5em;
   }
 }
 
 /* for screen width : 1090 px */
 
-@media(max-width:1090px){
+@media(max-width:1180px){
 
   .rate_hike{
-    width: 8vw;
+    width: 4.3em;
   }
   
   input.rate_hikenum{
-    width: 8vw;
-    font-size: 14px;
-    padding: 20px 9px;
+    width: 6.6em;
+    font-size: 1em;
+    padding: 1.3em 0.5em;
   }
 
-  .formalbox_result  .set_back .reset_btn{
-    margin: 3.3em 1em 0;
+  .result_title{
+    color: var(--white);
+    font-size: 1.2em;
   }
+  .person{
+    color: var(--color-span-person);
+    line-height: 1.4;
+    font-size: 0.8em;
+  }
+
+ 
+}
+
+/* for screen width: 1096px  */
+
+@media(max-width:1096px){
+
+  .in_title{
+    padding-bottom: 1em;
+    font-size: 0.8em;
+    font-weight: lighter;
+  }
+  .rate_hike{
+    width: 3.8em;
+  }
+  
+  input.rate_hikenum{
+    width: 7em;
+    font-size: 0.8em;
+    padding: 2.2em 0.5em;
+  }
+
+  .result_title{
+    color: var(--white);
+    font-size: 1em;
+  }
+  .person{
+    color: var(--color-span-person);
+    line-height: 1.4;
+    font-size: 0.6em;
+  }
+
 
 }
 
@@ -408,10 +456,14 @@ input.rate_hikenum{
   body{
     background: hsl(184, 14%, 56%);
   }
+
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
+    padding-right: 0.6em;
+  }
   
   .main_container{
     max-width: 70rem;
-    height: 260vh;
+    height: 240vh;
     overflow: hidden;
     margin: 1rem auto;
   }
@@ -421,7 +473,7 @@ input.rate_hikenum{
     position: relative;
     width: 100vw;
     height: 82em;
-    padding: 1.2rem ;
+    padding: 1.2rem;
     display: flex;
     flex-direction: column;
     border-radius: 36px;
@@ -430,109 +482,115 @@ input.rate_hikenum{
 
   .formalbox{
     flex-basis: 100%;
-    height: 35em;
+    max-height: 45em;
     margin:  1rem;
   }
 
-  
-  
-  
+  .formalbox_result{
+    position: relative;
+    top: 1rem;
+    max-height: 27em;
+  }
+
 
   #home .title{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     width: 100vw;
-    max-height: 6vh;
-    margin-right: 0;
-    transform: scale(0.75);
-  
-    object-fit: cover;
-    overflow: hidden; 
+    max-height: 10vh;
+    top: -1.3rem;
+    margin-left: 0.3rem;
+  }
+
+  #home .title img{
+    width: 10em;
+    height: 6em;
+    transform: scale(0.75); 
   }
 
   .in_title{
     font-size: 19px;
     font-weight: lighter;
+    padding-bottom: 2.4rem;
+  }
+
+  .formalbox_calculation .select {
+    position: relative;
+    top: -1.6rem;
+  }
+
+  .formalbox_calculation div span {
+    height: 40px;
+    flex-basis: 8%;
+    width: 2vw;
+  }
+  .formalbox_calculation div span img{
+    transform: scale(0.7);
+  }
+
+  .formalbox_calculation .bill{
+    width: 100vw;
+  }
+
+  .formalbox_calculation .people_bill{
+    position: relative;
+    top: -3.4rem;
+    width: 100vw;
+  }
+
+  .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1 {
+    flex-basis: 93%;
   }
 
   .rate_hike{
-    padding: 1em 1.4em;
+    padding: 1.3em 1.4em;
     font-size: 23px;
-    width: 38vw;
+    width: calc(40vw - 12px);
   }
   
   input.rate_hikenum{
     font-size: 19px;
     font-weight: bold;
     padding: 2.3em 0.6em;
-    width: 38vw;
+    width: calc(40vw - 12px);
   }
 
-  .mg_3{
-    margin: 1.1rem 0;
-    padding: 0.5rem;
-  }
 
   .formalbox_calculation .bill div, .formalbox_calculation .people_bill div {
     width: 87%;
   }
 
   .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
-    height: 1.5em;
+    height: 1.7em;
+    border: none;
+    outline: none;
   }
 
   .bill div span , .people_bill div span{
     width: 1.2em;
-    height: 3.4em;
+    height: 3.6em;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     margin: 0 auto;
   }
 
+
   .formalbox_result .tip_amount, .formalbox_result .total_amount{
-    justify-content: space-around;
-    margin-right: 1.4em;
-    
-  }
-
-  .formalbox_result .tip_amount{
-    margin-right: 2em;
-  }
-
-  
-  .bill div span img, .people_bill div span img{
-    width: 30px;
-    height: 30px;
-    margin-right: 2px;
-  }
-
-  .formalbox_result{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 25em;
+    justify-content: space-between;
   }
 
   .mg_2{
-    margin: 1em;
+    margin: 0 2em;
   }
   .mg_3{
     margin-top: 0.5em; 
-    padding: 2.5em 2em 2.5em 0;
+    padding: 2.3em 2em 2.5em 0;
   }
 
   .pd_5{
     padding: 0.7em 0 1em;
     margin: 0.4em 1em 0 0;
   }
-
-  .formalbox_result{
-    height: 300px;
-  }
-
 
   .result_title{
     color: var(--white);
@@ -544,11 +602,21 @@ input.rate_hikenum{
     font-size: 1.1em;
   }
 
+  .formalbox_result  .set_back{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+ 
+  }
+
   .formalbox_result  .set_back .reset_btn {
-    padding: 0.5em 0;
-    margin: 4.3em 1.3em 0;
-    font-size: 22px;
-    border-radius: 24px; 
+    padding: 0.8em 0;
+    font-size: 1.5em;
+    border-radius: 20px; 
   }
 
   .amt{
@@ -575,7 +643,6 @@ input.rate_hikenum{
   .formalbox_calculation .main_grid :first-child{
     grid-column: 1/ span 1;
     grid-row: 1/ span 1;
-    /* width: 40vw; */
     height: 4em;
   }
   .formalbox_calculation .main_grid :nth-child(2){
@@ -611,37 +678,16 @@ input.rate_hikenum{
 
 @media(max-width:600px){
 
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
+    padding-right: 1.3em;
+  }
 
   .rate_hike{
-    width: 36vw;
+    width: 34vw;
   }
   
   input.rate_hikenum{
-    width: 36vw;
-  }
-
-  
-  .formalbox_result{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    height: 62vh;
-  }
-
-  .result_title{
-    color: var(--white);
-    font-size: 1.2em;
-  }
-  .person{
-    color: var(--color-span-person);
-    line-height: 1.6;
-    font-size: 0.8em;
-  }
-
-  .formalbox_result .total_amount{
-    justify-content: space-around;
-    margin-right: 1.1em;
-    
+    width: 34vw;
   }
 
   .amt{
@@ -656,7 +702,7 @@ input.rate_hikenum{
 
 @media(max-width:450px){
   .main_container{
-    height: 230vh;
+    height: 210vh;
     overflow: hidden;
     margin: 1rem auto;
   }
@@ -666,10 +712,12 @@ input.rate_hikenum{
   }
   .rate_hike{
     width: 30vw;
+    font-size: 1em;
   }
   
   input.rate_hikenum{
     width: 30vw;
+    font-size: 0.8em;
   }
 
   .mg_3{
@@ -679,10 +727,31 @@ input.rate_hikenum{
 
   .formalbox_result{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-height: 54vh;
+    max-height: 20em;
   }
+
+  .result_title{
+    color: var(--white);
+    font-size: 1.1em;
+    padding-top: 0.5rem;
+  }
+  .person{
+    color: var(--color-span-person);
+    line-height: 1.6;
+    font-size: 0.9em;
+  }
+
+  .formalbox_result  .set_back  {
+    position: relative;
+    top: -2rem;
+  }
+
+  .formalbox_result  .set_back .reset_btn {
+    padding: 0.8em 0;
+    font-size: 1em;
+    border-radius: 20px; 
+  }
+
 
   .attribution { font-size: 10px; text-align: center; }
   .foot {padding-bottom: 0.4rem;}
@@ -695,44 +764,51 @@ input.rate_hikenum{
 @media(max-width:375px){
 
   .main_container{
-    height: 200vh;
+    height: 178vh;
     overflow: hidden;
     margin: 1rem auto;
   }
 
-  #home .title{
-    transform: scale(0.45);
+  .formalbox{
+    flex-basis: 100%;
+    max-height: 33em;
+    margin:  1rem;
+  }
+
+  .formalbox_result{
+    display: flex;
+    max-height: 16em;
+    margin: 0 0.9em 0 2.4em ;
   }
 
   .in_title{
-    font-size: 14px;
-    padding-bottom: 0.8rem;
+    font-size: 19px;
+    font-weight: lighter;
+    padding-bottom: 1.1em;
   }
 
+  
   .formalbox_calculation .select_tip .main_grid{ 
     grid-gap: 1rem;
     margin: 0 auto;
   }
 
-  .mg_3{
-    margin-top: 0.4em; 
-    padding: 1.5em 2em 1.5em 0;
-  }
 
   .rate_hike{
-    width: 28vw;
+    width: 26vw;
     padding: 0.7em 0.8em;
     
   }
   
   input.rate_hikenum{
-    width: 28vw;
-    padding: 2.3em 0.5em; 
+    width: 26vw;
+    padding: 3.1em 0.5em; 
+    font-size: 0.6em;
   }
-
+  
   .result_title{
     color: var(--white);
-    font-size: 1em;
+    font-size: 0.8em;
   }
   .person{
     color: var(--color-span-person);
@@ -741,32 +817,43 @@ input.rate_hikenum{
   }
 
   .amt{
-    font-size: 1.3em;
+    font-size: 1.1em;
+  }
+
+  .formalbox_calculation .people_bill{
+    position: relative;
+    top: -4.5em;
+    width: 100vw;
   }
 
   .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
-    height: 1.1em;
+    height: 1.2em;
   }
 
   .bill div span , .people_bill div span{
     width: 1.2em;
-    height: 3.1em;
+    height: 2.6em;
     margin: 0 auto;
   }
 
   .formalbox_calculation .select_tip .main_grid{
     position: relative;
-    top: 0;
+    top: -1.8em;
     left: 0;
     display:grid;
   }
 
+  .formalbox_result  .set_back  {
+    position: relative;
+    top: -2.4em;
+  }
+
 
   .formalbox_result  .set_back .reset_btn {
-    padding: 0.5em 0;
-    margin: 2.1em 1.3em 0;
-    font-size: 15px;
-    border-radius: 16px; 
+    padding: 0.8em 0;
+    font-size: 0.8em;
+    border-radius: 8px; 
+    width: 100%;
   }
 
   
@@ -781,23 +868,36 @@ input.rate_hikenum{
 @media(max-width:300px){
 
   .main_container{
-    height: 200vh;
+    height: 165vh;
     overflow: hidden;
     margin: 1rem auto;
   }
+
+  .formalbox{
+    flex-basis: 100%;
+    max-height: 30em;
+    margin:  1rem;
+  }
+
+  .formalbox_result{
+    display: flex;
+    max-height: 15em;
+    margin: 0 0.9em 0 1.7em ;
+  }
  
   .in_title{
-    font-size: 11px;
+    font-size: 14px;
     padding-bottom: 0.8rem;
   }
 
   .formalbox_calculation .select_tip .main_grid{
-    grid-gap: 0.8rem;
+    top: -0.8em;
   }
 
-  .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
+  
+  /* .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
     height: 1em;
-  }
+  } */
 
   .bill div span , .people_bill div span{
     width: 1.2em;
@@ -805,12 +905,12 @@ input.rate_hikenum{
     margin: 0 auto;
   }
 
-  .formalbox_result{
+  /* .formalbox_result{
     display: flex;
     max-height: 58vh;
-  }
+  } */
 
-  .rate_hike{
+  /* .rate_hike{
     width: 24vw;
     padding: 0.3em 0.8em;
     font-size: 15px;
@@ -821,11 +921,26 @@ input.rate_hikenum{
     width: 24vw;
     padding: 1.6em 0.5em; 
     font-size: 15px;
+  } */
+
+  .rate_hike{
+    width: 28vw;
+    padding: 0.7em 0.8em;
+    
+  }
+  
+  input.rate_hikenum{
+    width: 28vw;
+    padding: 2.3em 0.5em; 
   }
 
-  .formalbox_result{
+  /* .formalbox_result{
     max-height: 50vh;
     justify-content: flex-start;
+  } */
+
+  .mg_2{
+    margin: 0 1em;
   }
 
   .result_title{
@@ -839,10 +954,10 @@ input.rate_hikenum{
   }
 
   .amt{
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
-  .formalbox_result .tip_amount{
+  /* .formalbox_result .tip_amount{
     justify-content: space-around;
     margin-right: 0.9em;
     
@@ -851,7 +966,7 @@ input.rate_hikenum{
     justify-content: space-around;
     margin-right: 0.7em;
     
-  }
+  } */
 
   .formalbox_result  .set_back .reset_btn {
     padding: 0.3em 0;
