@@ -280,7 +280,7 @@ label{
 .rate_hike{
   text-decoration: none;
   border: none;
-  width: 6em;
+  width: 5em;
   padding: 0.9em 0.8em;
   margin: 7px;
   color: var(--white);
@@ -295,7 +295,7 @@ input.rate_hikenum{
   padding: 0.7em 0.5em;
   margin: 7px;
   font-size: 1.56em;
-  width: 5.6em;
+  width: 4.8em;
   border-radius: 10px;
  
 }
