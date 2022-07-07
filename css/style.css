@@ -39,7 +39,7 @@ input{
    -webkit-appearance:none;
    -moz-appearance:none;
     appearance: none;
-    margin-right: 1.4rem;  
+    margin-right: 0.4rem;  
  }
  
  input[type="number"] {
@@ -78,7 +78,7 @@ label{
 }
 .mg_3{
   margin-top: 0.5em; 
-  padding: 0.5em 2em 0.5em 0;
+  padding: 0.5em 2em 0 0;
 }
 
 .bill .message, .people_bill .message, .select .message{
@@ -145,9 +145,9 @@ label{
 
 .calculator{
   position: relative;
-  top: -2.5rem;
+  top: -2.5em;
   width: 74vw;
-  height: 62vh;
+  height: 70vh;
   padding: 1.2em ;
   display: flex;
   flex-direction: row;
@@ -163,7 +163,7 @@ label{
   flex-basis: 50%;
   margin-right: 1.6rem;
   overflow: hidden;
-  max-height: 27em;
+  max-height: 32em;
 }
 
 
@@ -175,7 +175,7 @@ label{
 
 .formalbox_calculation .people_bill{
   position: relative;
-  top: -0.6rem;
+  top: -0.6em;
 }
 
 .formalbox_calculation .bill div, .formalbox_calculation .people_bill div {
@@ -239,8 +239,8 @@ label{
 
 .formalbox_calculation .select_tip .main_grid{
   position: relative;
-  top: -1rem;
-  left: -0.5rem;
+  top: -1em;
+  left: -0.5em;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -358,7 +358,7 @@ input.rate_hikenum{
   text-decoration: none;
   border: none;
   border-radius: 5px;
-  padding: 8px 0;
+  padding: 4px 0;
   color: var(--secondary-color);
   cursor: pointer;
   background-color: var(--color-span-person);
@@ -406,12 +406,10 @@ input.rate_hikenum{
 
   .result_title{
     color: var(--white);
-    font-size: 1.2em;
   }
   .person{
     color: var(--color-span-person);
     line-height: 1.4;
-    font-size: 0.8em;
   }
 
  
@@ -427,11 +425,11 @@ input.rate_hikenum{
     font-weight: lighter;
   }
   .rate_hike{
-    width: 3.8em;
+    width: 3.5em;
   }
   
   input.rate_hikenum{
-    width: 7em;
+    width: 6.4em;
     font-size: 0.8em;
     padding: 2.2em 0.5em;
   }
@@ -446,6 +444,10 @@ input.rate_hikenum{
     font-size: 0.6em;
   }
 
+  .formalbox_result  .set_back .reset_btn {
+    margin: 5.6em 1em 0;
+  }
+
 
 }
 
@@ -455,10 +457,6 @@ input.rate_hikenum{
 
   body{
     background: hsl(184, 14%, 56%);
-  }
-
-  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
-    padding-right: 0.6em;
   }
   
   .main_container{
@@ -679,7 +677,11 @@ input.rate_hikenum{
 @media(max-width:600px){
 
   input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
-    padding-right: 1.3em;
+    margin-right: 1em;
+  }
+
+  .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1 {
+    flex-basis: 92%;
   }
 
   .rate_hike{
@@ -701,6 +703,11 @@ input.rate_hikenum{
 
 
 @media(max-width:450px){
+
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
+    margin-right: 1.8em;
+  }
+
   .main_container{
     height: 210vh;
     overflow: hidden;
@@ -732,7 +739,7 @@ input.rate_hikenum{
 
   .result_title{
     color: var(--white);
-    font-size: 1.1em;
+    font-size: 0.8em;
     padding-top: 0.5rem;
   }
   .person{
@@ -741,15 +748,11 @@ input.rate_hikenum{
     font-size: 0.9em;
   }
 
-  .formalbox_result  .set_back  {
-    position: relative;
-    top: -2rem;
-  }
-
   .formalbox_result  .set_back .reset_btn {
-    padding: 0.8em 0;
+    padding: 0.6em 0;
     font-size: 1em;
     border-radius: 20px; 
+    margin: 4em 1em 0;
   }
 
 
@@ -762,6 +765,10 @@ input.rate_hikenum{
 /* for screen width : 375 px */
 
 @media(max-width:375px){
+
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button{
+    margin-right: 1.8em;
+  }
 
   .main_container{
     height: 178vh;
@@ -821,13 +828,8 @@ input.rate_hikenum{
   }
 
   .formalbox_calculation .people_bill{
-    width: 80vw;
-  }
-
-  .formalbox_calculation .people_bill{
     position: relative;
     top: -4.5em;
-    width: 80vw;
   }
 
   .formalbox_calculation div .bill_sharing0, .formalbox_calculation div .bill_sharing1{
@@ -842,22 +844,20 @@ input.rate_hikenum{
 
   .formalbox_calculation .select_tip .main_grid{
     position: relative;
-    top: -1.8em;
+    top: -1.3em;
     left: 0;
     display:grid;
   }
 
-  .formalbox_result  .set_back  {
-    position: relative;
-    top: -2.4em;
-  }
+  
 
 
   .formalbox_result  .set_back .reset_btn {
-    padding: 0.8em 0;
+    padding: 0.6em 0;
     font-size: 0.8em;
     border-radius: 8px; 
     width: 100%;
+    margin: 1.8em 1em 0;
   }
 
   
@@ -872,20 +872,20 @@ input.rate_hikenum{
 @media(max-width:300px){
 
   .main_container{
-    height: 165vh;
+    height: 168vh;
     overflow: hidden;
     margin: 1rem auto;
   }
 
   .formalbox{
     flex-basis: 100%;
-    max-height: 30em;
+    max-height: 34em;
     margin:  1rem;
   }
 
   .formalbox_result{
     display: flex;
-    max-height: 15em;
+    max-height: 17em;
     margin: 0 0.9em 0 1.7em ;
   }
  
@@ -898,35 +898,31 @@ input.rate_hikenum{
     top: -0.8em;
   }
 
-  .formalbox_calculation .people_bill{
-    width: 75vw;
-  }
 
   .formalbox_calculation .people_bill{
     position: relative;
     top: -4.5em;
-    width: 75vw;
   }
 
   
 
   .bill div span , .people_bill div span{
     width: 1.2em;
-    height: 2em;
+    height: 2.6em;
     margin: 0 auto;
   }
 
  
 
   .rate_hike{
-    width: 28vw;
+    width: 26vw;
     padding: 0.7em 0.8em;
     
   }
   
   input.rate_hikenum{
-    width: 28vw;
-    padding: 2.3em 0.5em; 
+    width: 26vw;
+    padding: 3.1em 0.5em; 
   }
 
 
@@ -949,16 +945,13 @@ input.rate_hikenum{
   }
 
 
-  .formalbox_result  .set_back .reset_btn {
-    padding: 0.3em 0;
-    margin: 0.8em 1em 0;
-    font-size: 15px;
-    border-radius: 16px; 
-  }
 
-  .formalbox_result  .set_back  {
-    position: relative;
-    top: -3.7em;
+  .formalbox_result  .set_back .reset_btn {
+    padding: 0.6em 0;
+    font-size: 0.8em;
+    border-radius: 8px; 
+    width: 100%;
+    margin: 1.2em 1em 0;
   }
 
   .attribution { font-size: 8px; text-align: center; }
